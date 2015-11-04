@@ -363,7 +363,7 @@
 		2E7DB4FA140DFBDF009FE107 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "One Guy Group, Inc.";
 			};
 			buildConfigurationList = 2E7DB4FD140DFBDF009FE107 /* Build configuration list for PBXProject "DSPFilters" */;
@@ -443,6 +443,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = ../../include;
 				ONLY_ACTIVE_ARCH = YES;
 			};
