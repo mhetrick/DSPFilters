@@ -298,7 +298,7 @@ Filter family namespaces
 
 namespace {
 
-void UsageExamples ()
+__unused void UsageExamples ()
 {
   // create a two channel audio buffer
   int numSamples = 2000;
