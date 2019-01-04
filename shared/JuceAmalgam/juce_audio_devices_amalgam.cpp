@@ -35180,7 +35180,7 @@ public:
 		if (deviceName.isEmpty())
 			deviceName = inputDeviceName;
 
-		if (index >= 0)
+		if (index != nullptr)
 			return new CoreAudioIODevice (deviceName,
 										  inputIds [inputIndex],
 										  inputIndex,

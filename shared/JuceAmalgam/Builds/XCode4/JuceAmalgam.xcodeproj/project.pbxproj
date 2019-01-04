@@ -302,8 +302,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2EF3B4BF140F6646002CE947 /* SharedMacOS.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = JuceAmalgamMac;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -311,8 +315,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2EF3B4BF140F6646002CE947 /* SharedMacOS.xcconfig */;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = JuceAmalgamMac;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

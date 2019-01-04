@@ -415,7 +415,10 @@ template <class DesignType>
 void MainPanel::createFilterState (Dsp::Filter** pFilter, Dsp::Filter** pAudioFilter)
 {
   *pFilter = new Dsp::FilterDesign <DesignType, 1>;
+    
+  //createFilterDesign <DesignType, Dsp::DirectFormI> (pFilter, pAudioFilter);
 
+/*
   switch (m_menuStateType->getSelectedId())
   {
   case 1: createFilterDesign <DesignType, Dsp::DirectFormI> (pFilter, pAudioFilter); break;
@@ -423,8 +426,9 @@ void MainPanel::createFilterState (Dsp::Filter** pFilter, Dsp::Filter** pAudioFi
   case 3: createFilterDesign <DesignType, Dsp::TransposedDirectFormI> (pFilter, pAudioFilter); break;
   case 4: createFilterDesign <DesignType, Dsp::TransposedDirectFormII> (pFilter, pAudioFilter); break;
   default:
-    createFilterDesign <DesignType, Dsp::DirectFormI> (pFilter, pAudioFilter);
+    
   };
+*/
 }
 
 void MainPanel::createFilter ()
