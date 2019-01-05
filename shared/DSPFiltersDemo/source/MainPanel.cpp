@@ -399,6 +399,7 @@ void MainPanel::paint (Graphics& g)
 template <class DesignType, class StateType>
 void MainPanel::createFilterDesign (Dsp::Filter** pFilter, Dsp::Filter** pAudioFilter)
 {
+	/*
   switch (m_menuSmoothing->getSelectedId())
   {
   case 1:
@@ -408,7 +409,7 @@ void MainPanel::createFilterDesign (Dsp::Filter** pFilter, Dsp::Filter** pAudioF
   default:
     *pAudioFilter = new Dsp::FilterDesign <DesignType, 2, StateType>;
     break;
-  };
+  };*/
 }
 
 template <class DesignType>
@@ -416,19 +417,19 @@ void MainPanel::createFilterState (Dsp::Filter** pFilter, Dsp::Filter** pAudioFi
 {
   *pFilter = new Dsp::FilterDesign <DesignType, 1>;
     
-  //createFilterDesign <DesignType, Dsp::DirectFormI> (pFilter, pAudioFilter);
+  //createFilterDesign <DesignType, Dsp::DirectFormI<float>> (pFilter, pAudioFilter);
 
-/*
   switch (m_menuStateType->getSelectedId())
   {
-  case 1: createFilterDesign <DesignType, Dsp::DirectFormI> (pFilter, pAudioFilter); break;
-  case 2: createFilterDesign <DesignType, Dsp::DirectFormII> (pFilter, pAudioFilter); break;
-  case 3: createFilterDesign <DesignType, Dsp::TransposedDirectFormI> (pFilter, pAudioFilter); break;
-  case 4: createFilterDesign <DesignType, Dsp::TransposedDirectFormII> (pFilter, pAudioFilter); break;
+  case 1: createFilterDesign <DesignType, Dsp::DirectFormI<float>> (pFilter, pAudioFilter); break;
+  case 2: createFilterDesign <DesignType, Dsp::DirectFormII<float>> (pFilter, pAudioFilter); break;
+  case 3: createFilterDesign <DesignType, Dsp::TransposedDirectFormI<float>> (pFilter, pAudioFilter); break;
+  case 4: createFilterDesign <DesignType, Dsp::TransposedDirectFormII<float>> (pFilter, pAudioFilter); break;
   default:
+		createFilterDesign <DesignType, Dsp::DirectFormI<float>> (pFilter, pAudioFilter);
     
   };
-*/
+	
 }
 
 void MainPanel::createFilter ()
